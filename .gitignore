@@ -1,0 +1,6 @@
+/app/config/parameters.yml
+/app/config/default_site_parameters.yml
+/vendor/*
+/var/cache/*
+!.gitkeep
+*.log

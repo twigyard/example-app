@@ -1,0 +1,12 @@
+parameters:
+    # If enabled a new logfile is created every day.
+    log_rotation_enabled: false
+    log_max_files: 0
+    loggly_token: token_obtained_from_loggly
+    loggly_tags: ['webrocket', 'production'] # tag with site canonical url will be added automatically
+
+    # If all sites are to be run on a subdomain, this is the subdomain.
+    parent_domain: localhost
+
+    # Name of config file located in the root folder of the individual sites
+    site_config: site.yml

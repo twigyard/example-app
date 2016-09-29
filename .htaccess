@@ -1,0 +1,25 @@
+ <IfModule mod_rewrite.c>
+
+    RewriteEngine On
+
+    # Serve file if it exists
+    RewriteCond %{REQUEST_FILENAME} -f
+    RewriteRule ^(.*)?$ - [L]
+
+    # Redirect to the correct file on production environment
+    RewriteCond %{DOCUMENT_ROOT}/sites/%{HTTP_HOST}/web%{REQUEST_URI} -f
+    RewriteRule ^(.*)?$ sites/%{HTTP_HOST}/web/$1 [L]
+
+    # Redirect to the correct file on local environment
+    RewriteCond %{HTTP_HOST} (.*)\.localhost
+    RewriteCond %{DOCUMENT_ROOT}/sites/%1/web%{REQUEST_URI} -f
+    RewriteRule ^(.*)?$ sites/%1/web/$1 [L]
+
+    # Redirect to front controller on production environemnt
+    RewriteCond %{HTTP_HOST} !.*\.localhost
+    RewriteRule ^(.*)?$ web/app.php?httpauth=%{HTTP:Authorization} [QSA,L]
+
+    # Redirect to front controller on local environemnt
+    RewriteRule ^(.*)?$ web/app_dev.php?httpauth=%{HTTP:Authorization} [QSA,L]
+
+</IfModule>

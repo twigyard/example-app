@@ -1,0 +1,12 @@
+{
+    "authors": [
+        {
+            "name": "visionapps.cz",
+            "email": "info@visionapps.cz"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "twigyard/twigyard": "~0.8.0"
+    }
+}
