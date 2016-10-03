@@ -4,7 +4,6 @@ use TwigYard\Component\Application;
 use Monolog\Logger;
 
 $appRoot = __DIR__ . '/..';
-$localAccessAllowed = true;
 $cacheEnabled = false;
 $showErrors = true;
 $trackingEnabled = false;
@@ -16,7 +15,6 @@ $logOnLevel = Logger::DEBUG;
 
 $app = new Application(
     $appRoot,
-    $localAccessAllowed,
     $cacheEnabled,
     $showErrors,
     $trackingEnabled,
