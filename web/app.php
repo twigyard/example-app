@@ -4,6 +4,7 @@ use TwigYard\Component\Application;
 use Monolog\Logger;
 
 $appRoot = __DIR__ . '/..';
+$config = $appRoot . '/app/config/config.yml';
 $cacheEnabled = true;
 $showErrors = false;
 $trackingEnabled = true;
@@ -19,7 +20,8 @@ $app = new Application(
     $showErrors,
     $trackingEnabled,
     $logOnLevel,
-    $debugEmailEnabled
+    $debugEmailEnabled,
+    (new \Symfony\Component\Yaml\Yaml)->parse(file_get_contents($config))
 );
 
 $app->run();
