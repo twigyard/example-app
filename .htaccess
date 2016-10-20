@@ -11,12 +11,12 @@
     RewriteRule ^(.*)?$ sites/%{HTTP_HOST}/web/$1 [L]
 
     # Redirect to the correct file on local environment
-    RewriteCond %{HTTP_HOST} (.*)\.localhost
+    RewriteCond %{HTTP_HOST} (.*)\.twigyard\.localhost
     RewriteCond %{DOCUMENT_ROOT}/sites/%1/web%{REQUEST_URI} -f
     RewriteRule ^(.*)?$ sites/%1/web/$1 [L]
 
     # Redirect to front controller on production environemnt
-    RewriteCond %{HTTP_HOST} !.*\.localhost
+    RewriteCond %{HTTP_HOST} !.*\.twigyard\.localhost
     RewriteRule ^(.*)?$ web/app.php?httpauth=%{HTTP:Authorization} [QSA,L]
 
     # Redirect to front controller on local environemnt

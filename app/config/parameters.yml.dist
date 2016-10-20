@@ -6,7 +6,7 @@ parameters:
     loggly_tags: ['webrocket', 'production'] # tag with site canonical url will be added automatically
 
     # If all sites are to be run on a subdomain, this is the subdomain.
-    parent_domain: localhost
+    parent_domain: twigyard.localhost
 
     # Name of config file located in the root folder of the individual sites
     site_config: site.yml
