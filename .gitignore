@@ -1,5 +1,6 @@
 /app/config/parameters.yml
 /app/config/default_site_parameters.yml
+/sites/*
 /vendor/*
 /var/cache/*
 !.gitkeep
