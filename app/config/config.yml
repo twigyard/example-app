@@ -20,16 +20,15 @@ asset_dir: web
 data_dir: src/data
 language_dir: src/languages
 site_cache_dir: var/cache
+template_dir: src/templates
 
 site_parameters: parameters.yml
-
-template_dir: src/templates
 
 # can be located either in templates/ or templates/<locale> dirs
 error_404_page_name: 404.html
 error_500_page_name: 500.html
 
-# path relative to the ASSET_DIR
+# path relative to the folder defined as "asset_dir"
 image_cache_dir: image_cache
 
 cache_namespace_config: config
