@@ -1,0 +1,35 @@
+# Must not end with /
+base_path: ~
+
+# path relative to application root
+config_dir: app/config
+global_parameters: parameters.yml
+default_site_parameters: default_site_parameters.yml
+
+# path relative to application root
+sites_dir: sites
+
+# path relative to config cache directory
+config_cache_dir: var/cache
+
+log_dir: var/log
+
+
+# path relative to the site directory
+asset_dir: web
+data_dir: src/data
+language_dir: src/languages
+site_cache_dir: var/cache
+template_dir: src/templates
+
+site_parameters: parameters.yml
+
+# can be located either in templates/ or templates/<locale> dirs
+error_404_page_name: 404.html
+error_500_page_name: 500.html
+
+# path relative to the folder defined as "asset_dir"
+image_cache_dir: image_cache
+
+cache_namespace_config: config
+cache_namespace_assets: assets

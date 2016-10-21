@@ -1,9 +1,12 @@
 <?php
 
-use TwigYard\Component\Application;
 use Monolog\Logger;
+use TwigYard\Component\Application;
+use TwigYard\Component\ApplicationConfig;
+use Symfony\Component\Yaml\Yaml;
 
 $appRoot = __DIR__ . '/..';
+$config = $appRoot . '/app/config/config.yml';
 $cacheEnabled = false;
 $showErrors = true;
 $trackingEnabled = false;
@@ -19,7 +22,8 @@ $app = new Application(
     $showErrors,
     $trackingEnabled,
     $logOnLevel,
-    $debugEmailEnabled
+    $debugEmailEnabled,
+    new ApplicationConfig((new Yaml())->parse(file_get_contents($config)))
 );
 
 $app->run();
