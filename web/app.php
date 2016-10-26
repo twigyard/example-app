@@ -10,7 +10,6 @@ $config = $appRoot . '/app/config/config.yml';
 $cacheEnabled = true;
 $showErrors = false;
 $trackingEnabled = true;
-$debugEmailEnabled = false;
 
 require_once($appRoot . '/vendor/autoload.php');
 
@@ -22,7 +21,6 @@ $app = new Application(
     $showErrors,
     $trackingEnabled,
     $logOnLevel,
-    $debugEmailEnabled,
     new ApplicationConfig((new Yaml())->parse(file_get_contents($config)))
 );
 
