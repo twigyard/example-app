@@ -7,21 +7,7 @@ use Symfony\Component\Yaml\Yaml;
 
 $appRoot = __DIR__ . '/..';
 $config = $appRoot . '/app/config/config.yml';
-$cacheEnabled = true;
-$showErrors = false;
-$trackingEnabled = true;
 
 require_once($appRoot . '/vendor/autoload.php');
 
-$logOnLevel = Logger::CRITICAL;
-
-$app = new Application(
-    $appRoot,
-    $cacheEnabled,
-    $showErrors,
-    $trackingEnabled,
-    $logOnLevel,
-    new ApplicationConfig((new Yaml())->parse(file_get_contents($config)))
-);
-
-$app->run();
+(new Application($appRoot, new ApplicationConfig((new Yaml())->parse(file_get_contents($config)))))->run();
