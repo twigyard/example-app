@@ -10,16 +10,13 @@
     RewriteCond %{DOCUMENT_ROOT}/sites/%{HTTP_HOST}/web%{REQUEST_URI} -f
     RewriteRule ^(.*)?$ sites/%{HTTP_HOST}/web/$1 [L]
 
-    # Redirect to the correct file on local environment
-    RewriteCond %{HTTP_HOST} (.*)\.twigyard\.localhost # remove on prdoduction
-    RewriteCond %{DOCUMENT_ROOT}/sites/%1/web%{REQUEST_URI} -f # remove on prdoduction
-    RewriteRule ^(.*)?$ sites/%1/web/$1 [L] # remove on prdoduction
+    # Redirect to the correct static file if parent_domain is set - remove on production start
+    RewriteCond %{HTTP_HOST} (.*)\.twigyard\.localhost
+    RewriteCond %{DOCUMENT_ROOT}/sites/%1/web%{REQUEST_URI} -f
+    RewriteRule ^(.*)?$ sites/%1/web/$1 [L]
+    # Remove on production end
 
-    # Redirect to front controller on production environemnt
-    RewriteCond %{HTTP_HOST} !.*\.twigyard\.localhost # remove on prdoduction
+    # Redirect to front controller
     RewriteRule ^(.*)?$ web/app.php?httpauth=%{HTTP:Authorization} [QSA,L]
-
-    # Redirect to front controller on local environemnt
-    RewriteRule ^(.*)?$ web/app_dev.php?httpauth=%{HTTP:Authorization} [QSA,L] # remove on prdoduction
 
 </IfModule>

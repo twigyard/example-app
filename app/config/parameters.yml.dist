@@ -1,4 +1,11 @@
 parameters:
+    # enum debug, info, notice, warning, error, critical, alert, emergency
+    log_on_level: critical
+
+    cache_enabled: true
+    show_errors: false
+    tracking_enabled: true
+
     # If enabled a new logfile is created every day.
     log_rotation_enabled: false
     log_max_files: 0
