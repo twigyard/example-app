@@ -17,3 +17,6 @@ parameters:
 
     # Name of config file located in the root folder of the individual sites
     site_config: site.yml
+
+    # Indicates if sites in this installation can use https
+    ssl_allowed: false
