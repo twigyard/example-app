@@ -1951,16 +1951,16 @@
         },
         {
             "name": "twigyard/twigyard",
-            "version": "v2.0.0",
+            "version": "v2.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigyard/twigyard.git",
-                "reference": "c9e8f10ea056f7e7c7cd2b5087582bda81eb03ea"
+                "reference": "3772625b49966f63d6c438a46701b9ba6c74b451"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigyard/twigyard/zipball/c9e8f10ea056f7e7c7cd2b5087582bda81eb03ea",
-                "reference": "c9e8f10ea056f7e7c7cd2b5087582bda81eb03ea",
+                "url": "https://api.github.com/repos/twigyard/twigyard/zipball/3772625b49966f63d6c438a46701b9ba6c74b451",
+                "reference": "3772625b49966f63d6c438a46701b9ba6c74b451",
                 "shasum": ""
             },
             "require": {
@@ -2013,7 +2013,7 @@
                 }
             ],
             "description": "Twigyard library",
-            "time": "2018-04-19T08:26:02+00:00"
+            "time": "2018-04-30T09:59:17+00:00"
         },
         {
             "name": "zendframework/zend-diactoros",
