@@ -4,7 +4,6 @@ base_path: ~
 # path relative to application root
 config_dir: app/config
 global_parameters: parameters.yml
-default_site_parameters: default_site_parameters.yml
 
 # path relative to application root
 sites_dir: sites
@@ -21,8 +20,6 @@ data_dir: src/data
 language_dir: src/languages
 site_cache_dir: var/cache
 template_dir: src/templates
-
-site_parameters: parameters.yml
 
 # can be located either in templates/ or templates/<locale> dirs
 error_404_page_name: 404.html
